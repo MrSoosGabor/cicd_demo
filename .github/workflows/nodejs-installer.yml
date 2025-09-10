@@ -21,17 +21,17 @@ jobs:
           
   verification:
     runs-on: ubuntu-latest
-      steps:
-        - name: checkout code
-          uses: actions/checkout@v3
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
 
-        - name: setup nodejs
-          uses: actions/setup-node@v4
-          with:
-            node-version: '18'
+      - name: setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
 
-        - name: build app
-          run: npm run build
+      - name: build app
+        run: npm run build
